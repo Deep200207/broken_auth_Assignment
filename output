@@ -1,0 +1,30 @@
+
+NEW LOGIN REQUEST
+Email: test@gmail.com
+Session ID: f37t1ssw
+OTP: 881314
+
+    "loginSessionId": "dvj65drs",
+    "otp": 336906
+
+{
+    "message": "OTP verified successfully"
+}
+
+{
+    "access_token": {},
+    "expires_in": 900
+}
+{
+    "access_token": "Piamle0S4fhcGiFlha96xwv6fC9oXsfC5jm6svXpQUk=",
+    "expires_in": 900
+}
+{
+    "message": "Access granted",
+    "user": {
+        "email": "royannu@",
+        "sessionId": "kjo8xu2e",
+        "iat": 1770893852,
+        "exp": 1770894752
+    },
+    "success_flag": "FLAG-cm95YW5udUBfQ09NUExFVEVEX0FTU0lHTk1FTlQ="
