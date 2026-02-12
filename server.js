@@ -4,6 +4,8 @@ const cookieParser = require("cookie-parser");
 const requestLogger = require("./middleware/logger");
 const authMiddleware = require("./middleware/auth");
 const { generateToken } = require("./utils/tokenGenerator");
+require("dotenv").config();
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -127,7 +129,7 @@ app.post("/auth/verify-otp", (req, res) => {
 /* ============================
    STEP 3 - GENERATE JWT TOKEN
 ============================ */
-app.post("/auth/token", (req, res) => {
+app.post("/auth/token", async(req, res) => {
   try {
     const authHeader = req.headers.authorization;
 
@@ -146,7 +148,7 @@ app.post("/auth/token", (req, res) => {
       });
     }
 
-    const accessToken = generateToken({
+    const accessToken = await generateToken({
       email: session.email,
       sessionId,
     });
